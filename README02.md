@@ -1,6 +1,6 @@
 # Vue.jsの基礎
 
-### 2.双方向バインディング[v-model]
+### 2　双方向バインディング[v-model]
 
 - 確認ボタンを押すと、入力された内容を表示します　👇
 <div align="center"><img width="480" src="https://t.gyazo.com/teams/diveintocode/6b0d5ea68bc8be820af3da4b2a159bb0.gif"></div>
@@ -24,6 +24,7 @@ const app = new Vue({
 ```
 
 - htmlの`input`タグに`v-model="formData.name"`という属性を追加
+
 [index.html]
 ```
             <td class="contact_input">
