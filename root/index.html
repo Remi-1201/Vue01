@@ -13,13 +13,24 @@
         <h1>CONTACT</h1>
         <p>お問い合わせ</p>
       </div>
+      
+      <!--  v-if- formData.emailの値が空（未入力）またはformData.emailConfirmの値が空（未入力）の場合は入力を促すメッセージを表示 -->
+      <p v-if="formData.email === '' || formData.emailConfirm === ''" >
+        EメールフォームとEメール(確認)フォームを入力してください
+      </p>
       <!-- v-model- p要素を追加 -->
-      <p class="alert_color">{{ errorMessage }}</p>
+      <!-- v-ifの条件に当てはまらず、値が異なる場合のみエラーメッセージを表示 -->
+      <p class="alert_color" v-else-if="formData.email !== formData.emailConfirm">
+        {{ errorMessage }}
+      </p>
+      <!-- それ以外の場合（入力されており、かつ値が同じ場合）のメッセージ -->
+      <p v-else>正しく入力できています</p>
+
       <form action="#" method="POST" id="form">
         <table class="contact" id="table">
           <tr class="contact_line">
             <td class="contact_sign"><label for="name">お名前</label></td>            
-            <td class="contact_input">
+            <td class="contact_input">              
               <!-- v-model- <input type="text" name="name" id="name"> に v-model="formData.name" を追加 -->
               <input v-model="formData.name" type="text" name="name" id="name">
             </td>
@@ -34,8 +45,8 @@
           <tr class="contact_line">
             <td class="contact_sign"><label for="name">Eメール(確認)</label></td>
             <td class="contact_input">
-              <!-- v-model="formData.email_2" を追加 -->
-              <input v-model="formData.email_2" type="email" name="email_confirm" id="email_confirm">
+              <!-- v-model="formData.emailConfirm" を追加 -->
+              <input v-model="formData.emailConfirm" type="email" name="email_confirm" id="email_confirm">
             </td>
           </tr>
           <tr class="contact_content" id="content_field">
@@ -56,7 +67,7 @@
         <h2>ご記入内容の確認</h2>
         <p><span class="bold">お名前:　</span><span>{{ formData.name }}</span></p>
         <p><span class="bold">Eメール:　</span><span>{{ formData.email }}</span></p>
-        <p><span class="bold">Eメール(確認):　</span><span>{{ formData.email_2 }}</span></p>
+        <p><span class="bold">Eメール(確認):　</span><span>{{ formData.emailConfirm }}</span></p>
         <p><span class="bold">内容:　</span><span>{{ formData.content }}</span></p>
       </section>
     </section>
