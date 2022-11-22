@@ -34,4 +34,4 @@ const app = new Vue({
 })
 ```
 
-- 詳細☛　https://github.com/Remi-1201/Vue01/commit/a0ce96db1487d55fb83471dc08d352a43cddfe4b
+- 詳細　https://github.com/Remi-1201/Vue01/commit/a0ce96db1487d55fb83471dc08d352a43cddfe4b
