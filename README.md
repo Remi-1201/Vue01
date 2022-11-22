@@ -18,13 +18,14 @@
 </html>
 ```
 
-### 2　Vueインスタンスの生成とDOMのバインディング
+- Vueインスタンスの生成とDOMのバインディング
 
 [validation.js]
 
 ```
-# アプリの定義 htmlではid="app"で呼び出す
+# const appでアプリを定義　htmlではid="app"でアプリを呼び出す
 # new Vue({ })としてVueインスタンスをapp定数に代入している
+
 const app = new Vue({
   el: '#app',
   data: {
