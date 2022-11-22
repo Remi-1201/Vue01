@@ -28,9 +28,8 @@
 
 const app = new Vue({
   el: '#app',
-  data: {
-  　# htmlではdata.errorMessageで値を呼び出す
-    errorMessage: 'Eメールが一致しません',
+  data: {  　
+    errorMessage: 'Eメールが一致しません',　# htmlではdata.errorMessageで値を呼び出す
   }
 })
 ```
