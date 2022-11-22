@@ -10,10 +10,6 @@
 > - 「Eメールが一致しません」 = `errorMessage` =  Eメール入力フォームと確認フォームの値が異なっている場合はエラーメッセージを表示
 > - 「正しく入力できています」 = それ以外の場合（入力されており、かつ値が同じ場合）のメッセージ
 
-
-https://github.com/Remi-1201/Vue01/commit/b20f9b710a6186e13a62f9e2397d0c40b1ab3dd3
-
-
 [validation.js]
 ```
 const app = new Vue({
@@ -48,3 +44,5 @@ const app = new Vue({
 <!-- それ以外の場合（入力されており、かつ値が同じ場合）のメッセージ -->
   <p v-else>正しく入力できています</p>
 ```
+
+- 詳細　https://github.com/Remi-1201/Vue01/commit/b20f9b710a6186e13a62f9e2397d0c40b1ab3dd3
